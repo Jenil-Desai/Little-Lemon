@@ -1,11 +1,17 @@
-import { Text, View, StyleSheet, Image } from "react-native";
-import * as React from "react";
-
-import Button from "@/components/global/Button";
+import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
+import * as React from "react";
 
 const WelcomeScreen = () => {
   const router = useRouter();
+
+  function menuOnPress() {
+    router.push("/MenuScreen");
+  }
+
+  function newsletterOnPress() {
+    router.push("/SubscribeScreen");
+  }
 
   return (
     <View style={styles.container}>
@@ -18,13 +24,14 @@ const WelcomeScreen = () => {
           Little Lemon, your local Mediterranean Bistro
         </Text>
       </View>
-      <Button
-        children="Menu"
-        onPress={() => {
-          router.push("/menu");
-        }}
-        disabled={false}
-      />
+      <View style={styles.btnContainer}>
+        <TouchableOpacity style={styles.btn} onPress={menuOnPress}>
+          <Text style={styles.btnText}>Menu</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.btn} onPress={newsletterOnPress}>
+          <Text style={styles.btnText}>Newsletter</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -53,6 +60,23 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 20,
     fontWeight: "bold",
+  },
+  btn: {
+    borderRadius: 8,
+    backgroundColor: "#495E57",
+    justifyContent: "center",
+    padding: 8,
+    width: "50%",
+  },
+  btnText: {
+    fontSize: 16,
+    color: "white",
+    textAlign: "center",
+  },
+  btnContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    gap: 5,
   },
 });
 
