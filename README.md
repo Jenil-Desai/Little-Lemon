@@ -1,50 +1,113 @@
-# Welcome to your Expo app 👋
+# 🍋 Little Lemon
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Little Lemon** is a Mediterranean-inspired bar and small plates restaurant application. It focuses on fresh produce, bold flavors, bespoke cocktails, and a premium wine selection.
 
-## Get started
+---
 
-1. Install dependencies
+## 📑 Table of Contents
+
+1. [Overview](#-overview)
+2. [Technologies](#-technologies)
+3. [Packages & Libraries Used](#-packages--libraries-used)
+4. [Getting Started](#-getting-started)
+5. [Setup](#-setup)
+6. [Features](#-features)
+7. [Demo & Screenshots](#-demo--screenshots)
+8. [Acknowledgments](#-acknowledgments)
+9. [License](#-license)
+
+---
+
+## 🌟 Overview
+
+**Description**:  
+The **Little Lemon** application provides an intuitive and visually appealing experience to explore the restaurant’s menu, subscribe to newsletters, and enjoy Mediterranean cuisine digitally.
+
+---
+
+## 💻 Technologies
+
+This project is built with:
+
+| Technology       | Description                         |
+| ---------------- | ----------------------------------- |
+| **React Native** | Cross-platform mobile framework     |
+| **TypeScript**   | Ensures type safety and scalability |
+
+---
+
+## 📦 Packages / Libraries Used
+
+| Package / Library  | Purpose                          |
+| ------------------ | -------------------------------- |
+| `Expo`             | Simplifies development & testing |
+| `React Navigation` | Enables smooth app navigation    |
+
+---
+
+## 🚀 Getting Started
+
+1. Install Node.js
+2. Visual Studio Code or Any Fav IDE
+
+---
+
+## ⚙️ Setup
+
+1. Clone the repo:
+
+   ```bash
+   git clone https://github.com/Jenil-Desai-Little-Lemon
+   ```
+
+2. Go To Folder:
+
+   ```bash
+   cd little-lemon
+   ```
+
+3. Install Dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
-
+4. Start The Application:
    ```bash
-    npx expo start
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🎯 Features
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+1. **Welcome Screen** - Greet users with a beautiful introduction.
+2. **Menu Screen** - Explore Mediterranean-inspired dishes and drinks.
+3. **Subscribe to Newsletter** - Stay updated with the latest offers.
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🔗 Demo & Screenshots
 
-```bash
-npm run reset-project
-```
+|                                            Welcome Screen | Menu Screen                                         | Newsletter Screen                                               |
+| --------------------------------------------------------: | --------------------------------------------------- | --------------------------------------------------------------- |
+| ![Welcome Screen](./assets/screenshots/WelcomeScreen.png) | ![Menu Screen](./assets/screenshots/MenuScreen.png) | ![Newsletter Screen](./assets/screenshots/NewsletterScreen.png) |
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🙏 Acknowledgments
 
-To learn more about developing your project with Expo, look at the following resources:
+Special thanks to the following resources:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1. [Coursera Meta Official React Native Course](https://www.coursera.org/learn/react-native-course)
+2. [Expo Documentation](https://docs.expo.dev/)
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## 📜 License
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is licensed under the [MIT License](LICENSE). See the [LICENSE](LICENSE) file for details.
+
+---
+
+### 🍋 Experience fresh Mediterranean flavors with **Little Lemon**!
