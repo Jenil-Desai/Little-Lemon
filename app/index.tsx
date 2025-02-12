@@ -1,47 +1,61 @@
+import { Text, View, StyleSheet, Image } from "react-native";
+import { NavigationProp } from "@react-navigation/native";
 import * as React from "react";
-import { View, StyleSheet } from "react-native";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import LittleLemonHeader from "@/components/global/LittleLemonHeader";
-import LittleLemonFooter from "@/components/global/LittleLemonFooter";
-import WelcomeScreen from "./WelcomeScreen";
-import LoginScreen from "./LoginScreen";
+import Button from "@/components/global/Button";
 
-const Tab = createBottomTabNavigator();
-
-export default function App() {
-  return (
-    <>
-      <View style={styles.container}>
-        <LittleLemonHeader />
-        <Tab.Navigator
-          screenOptions={({ route }) => ({
-            tabBarIcon: ({ size }) => {
-              if (route.name === "Welcome") {
-                return <Ionicons name={"ios-home"} size={size} />;
-              } else if (route.name === "Login") {
-                return <Ionicons name={"ios-enter"} size={size} />;
-              }
-            },
-          })}
-          initialRouteName="Login"
-        >
-          <Tab.Screen name="Welcome" component={WelcomeScreen} />
-          <Tab.Screen name="Login" component={LoginScreen} />
-        </Tab.Navigator>
-      </View>
-      <View style={styles.footerContainer}>
-        <LittleLemonFooter />
-      </View>
-    </>
-  );
+interface WelcomeScreenProps {
+  navigation: NavigationProp<any>;
 }
+
+const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
+  return (
+    <View style={styles.container}>
+      <View style={styles.contentContainer}>
+        <Image
+          style={styles.logo}
+          source={require("../assets/images/little-lemon-logo.png")}
+        />
+        <Text style={styles.title}>
+          Little Lemon, your local Mediterranean Bistro
+        </Text>
+      </View>
+      <Button
+        children="Menu"
+        onPress={() => {
+          navigation.navigate("");
+        }}
+        disabled={false}
+      />
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#333333",
+    padding: 24,
+    backgroundColor: "white",
+    justifyContent: "space-between",
   },
-  footerContainer: { backgroundColor: "#333333" },
+  contentContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  logo: {
+    height: 200,
+    width: 300,
+    resizeMode: "contain",
+  },
+  title: {
+    marginTop: 48,
+    paddingVertical: 10,
+    color: "#333333",
+    textAlign: "center",
+    fontSize: 20,
+    fontWeight: "bold",
+  },
 });
+
+export default WelcomeScreen;

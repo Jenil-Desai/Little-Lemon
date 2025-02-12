@@ -1,7 +1,9 @@
-// import { NavigationContainer } from "@react-navigation/native";
+import { Stack } from "expo-router";
 
-// import { ReactNode } from "react";
-
-// export default function RootLayout({ Children }: { Children: ReactNode }) {
-//   return <NavigationContainer>{Children}</NavigationContainer>;
-// }
+export default function RootLayout() {
+  return (
+    <Stack initialRouteName="index">
+      <Stack.Screen name="index" options={{ title: "Welcome" }} />
+    </Stack>
+  );
+}
