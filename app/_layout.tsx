@@ -1,5 +1,7 @@
-import { Stack } from "expo-router";
+// import { NavigationContainer } from "@react-navigation/native";
 
-export default function RootLayout() {
-  return <Stack screenOptions={{ headerShown: false }} />;
-}
+// import { ReactNode } from "react";
+
+// export default function RootLayout({ Children }: { Children: ReactNode }) {
+//   return <NavigationContainer>{Children}</NavigationContainer>;
+// }
