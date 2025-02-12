@@ -1,14 +1,12 @@
 import { Text, View, StyleSheet, Image } from "react-native";
-import { NavigationProp } from "@react-navigation/native";
 import * as React from "react";
 
 import Button from "@/components/global/Button";
+import { useRouter } from "expo-router";
 
-interface WelcomeScreenProps {
-  navigation: NavigationProp<any>;
-}
+const WelcomeScreen = () => {
+  const router = useRouter();
 
-const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.contentContainer}>
@@ -23,7 +21,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
       <Button
         children="Menu"
         onPress={() => {
-          navigation.navigate("");
+          router.push("/menu");
         }}
         disabled={false}
       />
